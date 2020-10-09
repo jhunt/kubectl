@@ -1,0 +1,16 @@
+name: 'Kubectl'
+description: Interact with a Kubernetes Cluster via kubectl
+branding:
+  icon: terminal
+  color: blue
+
+inputs:
+  kubeconfig:
+    description: A base64'd version of your ~/.kube/config file
+    required: true
+  context:
+    description: The name of the Kubernetes context to use.
+
+runs:
+  using: docker
+  image: Dockerfile
